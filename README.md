@@ -7,7 +7,7 @@ Poisoning attacks on knowledge bases for RAG systems face two fundamental challe
 To enable the effective single document poisoning attack, we propose AuthChain, a novel knowledge poisoning attack method that leverages Chain-of-Evidence theory and authority effect to craft more convincing poisoned documents. AuthChain generates poisoned content that establishes strong evidence chains and incorporates authoritative statements, effectively overcoming the interference from both authentic documents and LLMs' internal knowledge.
 Extensive experiments across six popular LLMs demonstrate that AuthChain achieves significantly higher attack success rates while maintaining superior stealthiness against RAG defense mechanisms compared to state-of-the-art baselines.
 
-The example of CoE features and CoE:
+The overview of Authchain:
 <p align="center">
   <img src="https://github.com/lsplx/ScopeCOE/blob/main/fig/CoE_explain_new.png" width="700"/>
 </p>
