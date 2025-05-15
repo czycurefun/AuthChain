@@ -18,7 +18,12 @@ The overview of Authchain:
 
 
 # Running
+**Information Extraction**
+```
+python extract_information.py
+```   
 
+**Poisoned Document Generation**
 ```
 python AuthChain.py
 ```   
