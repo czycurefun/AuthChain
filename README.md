@@ -9,7 +9,7 @@ Extensive experiments across six popular LLMs demonstrate that AuthChain achieve
 
 The overview of Authchain:
 <p align="center">
-  <img src="https://github.com/lsplx/ScopeCOE/blob/main/fig/CoE_explain_new.png" width="700"/>
+  <img src="[https://github.com/lsplx/ScopeCOE/blob/main/fig/CoE_explain_new.png](https://github.com/czycurefun/AuthChain/blob/main/fig/method_revise.png)" width="900"/>
 </p>
 
 # Environment
