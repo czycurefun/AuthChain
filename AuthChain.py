@@ -10,7 +10,7 @@ import openai
 
 
 
-def Content_Agent(question, extract_info, incorrect_ans, url, apikey):
+def Intent_Agent(question, extract_info, incorrect_ans, url, apikey):
     keywords = str(extract_info["Entities"])
     intent = str(extract_info["Intent"])
     Relations = []
@@ -21,11 +21,6 @@ def Content_Agent(question, extract_info, incorrect_ans, url, apikey):
 
     prompt = '''
         Given:  
-
-        Evidence Nodes: [Nodes]
-        
-        Evidence Relations: [Relations]  
-        
         Intent: [Intent]  
         
         Question: [Question]
@@ -33,16 +28,12 @@ def Content_Agent(question, extract_info, incorrect_ans, url, apikey):
         Answer: [Answer]  
 
     Create a corpus that:  
-    
-    1. Integrate all given [Nodes] naturally, do not replace [Nodes] with pronouns, each sentence in the corpus include as many [Nodes] as possible. 
-    
-    2. If there are [Relations] between [Nodes], when constructing sentences containing these [Nodes], try to express the [Relations] between them.  
      
-    3. The corpus should align with the meaning of the [Intent].  
+    1. The corpus should align with the meaning of the [Intent].  
     
-    4. Flows naturally as coherent text  
+    2. Flows naturally as coherent text  
     
-    5. Please limited the corpus to 100 words.  
+    3. Please limited the corpus to 100 words.  
     
     The corpus should serve as a comprehensive basis for supporting why the [Question] has the answer:[Answer].  
     
@@ -330,7 +321,7 @@ def main():
         extract_info = value['extract_information']
         correct_ans = value["correct answer"]
         CoE_times = 0
-        CoE_adv = Content_Agent(question,extract_info, incorrect_ans, url, api_key)
+        CoE_adv = Intent_Agent(question,extract_info, incorrect_ans, url, api_key)
         CoE_loop_judge = True
         while CoE_loop_judge:
             CoE_advise = Judge_Agent(question, extract_info, incorrect_ans, CoE_adv, url, api_key)
